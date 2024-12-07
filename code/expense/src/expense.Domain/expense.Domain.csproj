@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\expense.Shared\expense.Shared.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Interfaces\" />
   </ItemGroup>
