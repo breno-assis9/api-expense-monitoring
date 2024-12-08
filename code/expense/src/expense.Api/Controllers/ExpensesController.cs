@@ -37,7 +37,7 @@ namespace expense.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get(ExpenseEntity expense)
+        public async Task<IActionResult> Get()
         {
             var result = await _expenseService.GetAll();
             return Ok(result);
