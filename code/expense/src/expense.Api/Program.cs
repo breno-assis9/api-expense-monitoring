@@ -1,6 +1,9 @@
 using expense.Api.Extensions;
+using expense.Application.Mapping;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 builder.Services.AddApplicationServices(builder.Configuration);
 

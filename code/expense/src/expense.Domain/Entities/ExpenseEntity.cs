@@ -6,14 +6,13 @@ namespace expense.Domain.Entities
     public class ExpenseEntity : EntityBase
     {
         #region Constructors
+
         public ExpenseEntity(ExpenseTypeEnum expenseType,
                              PaymentTypeEnum paymentType,
                              CardTypeEnum? cardType,
                              string description,
                              decimal value,
-                             DateTime dueDate, 
-                             DateTime dataRegister, 
-                             DateTime dataUpdate)
+                             DateTime dueDate)
         {
             ExpenseType = expenseType;
             PaymentType = paymentType;
@@ -22,7 +21,25 @@ namespace expense.Domain.Entities
             Value = value;
             DueDate = dueDate;
             DataRegister = DateTime.Now;
-            DataUpdate = dataUpdate;
+            DataUpdate = DateTime.Now;
+        }
+
+        public ExpenseEntity(Guid id, 
+                             ExpenseTypeEnum expenseType,
+                             PaymentTypeEnum paymentType,
+                             CardTypeEnum? cardType,
+                             string description,
+                             decimal value,
+                             DateTime dueDate)
+        {
+            Id = id;
+            ExpenseType = expenseType;
+            PaymentType = paymentType;
+            CardType = cardType;
+            Description = description;
+            Value = value;
+            DueDate = dueDate;
+            DataUpdate = DateTime.Now;
         }
 
         #endregion

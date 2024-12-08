@@ -1,5 +1,5 @@
-﻿using expense.Application.Interfaces;
-using expense.Domain.Entities;
+﻿using expense.Application.DTOs.Request;
+using expense.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace expense.Api.Controllers
@@ -16,14 +16,14 @@ namespace expense.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(ExpenseEntity expense)
+        public async Task<IActionResult> Post(AddExpenseRequest expense)
         {
             await _expenseService.Add(expense);
             return Ok();
         }
 
         [HttpPut]
-        public async Task<IActionResult> Put(ExpenseEntity expense)
+        public async Task<IActionResult> Put(UpdateExpenseRequest expense)
         {
             await _expenseService.Update(expense);
             return Ok();
