@@ -11,8 +11,4 @@
     <ProjectReference Include="..\expense.Infrastructure.Data\expense.Infrastructure.Data.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
 </Project>
