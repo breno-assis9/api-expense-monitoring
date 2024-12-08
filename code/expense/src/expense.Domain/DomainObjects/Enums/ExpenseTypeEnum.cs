@@ -1,12 +1,11 @@
-﻿namespace expense.Domain.DomainObjects.Enums
+﻿namespace expense.Domain.DomainObjects.Enums;
+
+public enum ExpenseTypeEnum
 {
-    public enum ExpenseTypeEnum
-    {
-        Alimentacao,
-        Transporte,
-        Moradia,
-        Lazer,
-        Estudos,
-        Outros
-    }
+    Alimentacao,
+    Transporte,
+    Moradia,
+    Lazer,
+    Estudos,
+    Outros
 }

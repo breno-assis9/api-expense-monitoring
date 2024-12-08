@@ -1,12 +1,11 @@
-﻿namespace expense.Domain.DomainObjects.Entities
-{
-    public abstract class EntityBase
-    {
-        protected EntityBase()
-        {
-            Id = Guid.NewGuid();
-        }
+﻿namespace expense.Domain.DomainObjects.Entities;
 
-        public Guid Id { get; set; }
+public abstract class EntityBase
+{
+    protected EntityBase()
+    {
+        Id = Guid.NewGuid();
     }
+
+    public Guid Id { get; set; }
 }
